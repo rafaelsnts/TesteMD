@@ -10,6 +10,7 @@
 * Gerar relatórios de vendas, clientes e estoque.
 
 **Requisitos técnicos:**
+
 *.NET Framework 4.6
 * C#
 * Windows Forms
