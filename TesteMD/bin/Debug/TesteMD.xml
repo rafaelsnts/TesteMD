@@ -1,0 +1,601 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TesteMD</name>
+    </assembly>
+    <members>
+        <member name="M:TesteMD.Forms._1___Principal.form_GraficoVendasMenuInicial.CarregarDadosChartSemanal">
+            <summary>
+            Carrega os dados de vendas semanais e os exibe em um gráfico de colunas.
+            Obtém as vendas semanais através do serviço de vendas (_vendaService),
+            adiciona os dados ao gráfico e define os títulos dos eixos X e Y.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms._1___Principal.form_GraficoVendasMenuInicial.CarregarDadosChartMensal">
+            <summary>
+            Carrega os dados de vendas mensais e os exibe em um gráfico de colunas.
+            Obtém as vendas mensais através do serviço de vendas (_vendaService),
+            adiciona os dados ao gráfico e define os títulos dos eixos X e Y.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms._1___Principal.form_GraficoVendasMenuInicial.form_GraficoVendasMenuInicial_Load(System.Object,System.EventArgs)">
+            <summary>
+            Carrega os dados dos gráficos de vendas mensais e semanais ao iniciar o formulário.
+            </summary>
+        </member>
+        <member name="F:TesteMD.Forms._1___Principal.form_GraficoVendasMenuInicial.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms._1___Principal.form_GraficoVendasMenuInicial.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms._1___Principal.form_GraficoVendasMenuInicial.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms._1___Principal.form_MenuPrincipal.CarregarFormPainelCentral(System.Object)">
+            <summary>
+                Carrega o form dentro do panel do form principal, configura o novo form chamado dentro do panel
+            e o ajusta para preencher todo o espaço do panel
+            </summary>
+            <param name="Form">Instância do formulário a ser carregado no painel central.</param>
+        </member>
+        <member name="M:TesteMD.Forms._1___Principal.form_MenuPrincipal.novoClienteToolStripMenuItem_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre o formulário de cadastro de cliente como uma janela modal. 
+            Se um formulário principal (`formEmAberto`) estiver ativo, ele é passado como referência 
+            para o formulário de cadastro, caso contrário, o formulário de cadastro é instanciado sem parâmetros.
+            </summary>
+            <param name="sender">Objeto que disparou o evento.</param>
+            <param name="e">Argumentos do evento.</param>
+        </member>
+        <member name="F:TesteMD.Forms._1___Principal.form_MenuPrincipal.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms._1___Principal.form_MenuPrincipal.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms._1___Principal.form_MenuPrincipal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_AlterarInformacoesCliente.CarregarDadosClientePorID">
+            <summary>
+            Carrega os dados de um cliente específico pelo ID e preenche os campos do formulário com as informações.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_AlterarInformacoesCliente.btnAlterarInformacoesCliente_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para o botão de alterar informações do cliente. Valida o nome, atualiza o cliente e exibe uma mensagem de sucesso.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_AlterarInformacoesCliente.AtualizarTabelaClientesFormPrincipal">
+            <summary>
+            Atualiza a tabela de clientes na tela principal ao salvar uma alteração ou novo cliente.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_AlterarInformacoesCliente.FormatarCampoTelefone(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Formata o campo de telefone para incluir parênteses e hífen automaticamente enquanto o usuário digita.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_AlterarInformacoesCliente.txtTelefoneCliente_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Evento do campo de telefone que chama o método de formatação para assegurar o formato correto do número.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_AlterarInformacoesCliente.txtCep_Leave(System.Object,System.EventArgs)">
+            <summary>
+            Busca automaticamente informações de endereço com base no CEP inserido e preenche os campos correspondentes.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_AlterarInformacoesCliente.ImpedirDigitarLetras(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Impede o usuario de inserir letras no campo, permitindo apenas números e backspace.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_AlterarInformacoesCliente.txtCep_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Evento do campo de CEP que chama o método para impedir a digitação de letras.
+            </summary>
+        </member>
+        <member name="F:TesteMD.Forms.Clientes.form_AlterarInformacoesCliente.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_AlterarInformacoesCliente.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_AlterarInformacoesCliente.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_CadastrarCliente.LimparCampos">
+            <summary>
+            Limpa todos os campos do formulário, redefinindo-os para valores em branco ou padrão.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_CadastrarCliente.btnCadastrarCliente_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento para o botão de cadastrar cliente. Valida os campos obrigatórios, cria e adiciona um novo cliente, atualiza a tabela de clientes e limpa os campos.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_CadastrarCliente.AtualizarTabelaClientesFormPrincipal">
+            <summary>
+            Atualiza a tabela de clientes na tela principal ao cadastrar um novo cliente ou salvar uma alteração.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_CadastrarCliente.FormatarCampoTelefone(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Formata o campo de telefone para incluir parênteses e hífen automaticamente enquanto o usuário digita.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_CadastrarCliente.txtTelefoneCliente_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Evento do campo de telefone que chama o método de formatação para assegurar o formato correto do número.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_CadastrarCliente.PreencherInformacoesCep">
+            <summary>
+            Busca automaticamente informações de endereço com base no CEP inserido e preenche os campos correspondentes.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_CadastrarCliente.txtCep_Leave(System.Object,System.EventArgs)">
+            <summary>
+            Evento acionado ao sair do campo de CEP, chamando o método para preencher automaticamente as informações do endereço.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_CadastrarCliente.ImpedirDigitarLetras(System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Impede a inserção de letras no campo, permitindo apenas números e backspace.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_CadastrarCliente.txtCep_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Evento do campo de CEP que chama o método para impedir a digitação de letras.
+            </summary>
+        </member>
+        <member name="F:TesteMD.Forms.Clientes.form_CadastrarCliente.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_CadastrarCliente.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_CadastrarCliente.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_ClientePrincipal.ConfigurarDataGridViewClientes">
+            <summary>
+            Configura as colunas do grid para exibir as informações dos clientes com cabeçalhos personalizados e visibilidade ajustada.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_ClientePrincipal.PreencherGridClientes">
+            <summary>
+            Preenche o grid com a lista de clientes do banco de dados, executando uma query para recuperar os dados.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_ClientePrincipal.form_ClientePrincipal_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento disparado ao carregar o formulário principal de clientes, preenchendo o grid e configurando suas colunas.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_ClientePrincipal.txtBuscarCliente_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento para busca de cliente em tempo real enquanto o usuário digita, filtrando o grid pelo nome do cliente.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_ClientePrincipal.CarregarTabelaPorNomeCliente(System.String)">
+            <summary>
+            Carrega a tabela de clientes com base no nome fornecido, utilizando uma query com o nome parcial ou completo do cliente.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_ClientePrincipal.btnEditarInformacoesMenu_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento de clique do botão para editar informações do cliente. Obtém o ID do cliente selecionado e abre o formulário de edição.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_ClientePrincipal.btnExcluirClienteMenu_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento de clique do botão para excluir o cliente selecionado. Verifica se o cliente está vinculado a uma venda antes de excluí-lo.
+            </summary>
+        </member>
+        <member name="F:TesteMD.Forms.Clientes.form_ClientePrincipal.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_ClientePrincipal.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms.Clientes.form_ClientePrincipal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:TesteMD.Forms.Produtos.form_AlterarInformacoesProduto.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Produtos.form_AlterarInformacoesProduto.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms.Produtos.form_AlterarInformacoesProduto.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="F:TesteMD.Forms.Produtos.form_CadastrarProduto.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Produtos.form_CadastrarProduto.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms.Produtos.form_CadastrarProduto.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Produtos.form_ProdutoPrincipal.CarregarTabelaBuscaProduto(System.String)">
+            <summary>
+            Essa tabela faz a busca dos produtos de acordo com o nome do produto ou o codigo de barras
+            </summary>
+            <param name="_produto">texto digitado pelo usuario</param>
+        </member>
+        <member name="F:TesteMD.Forms.Produtos.form_ProdutoPrincipal.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Produtos.form_ProdutoPrincipal.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms.Produtos.form_ProdutoPrincipal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.ReportView.form_RelatorioClientes.form_RelatorioClientes_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento disparado ao carregar o formulário de relatório de clientes, iniciando o carregamento dos dados no ReportViewer.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.ReportView.form_RelatorioClientes.CarregarRelatorioCliente">
+            <summary>
+            Carrega o relatório de clientes no ReportViewer, buscando todos os clientes do repositório e adicionando-os como fonte de dados.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.ReportView.form_RelatorioClientes.reportViewerCliente_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento disparado ao carregar o componente ReportViewer, carregando o relatório de clientes.
+            </summary>
+        </member>
+        <member name="F:TesteMD.Forms.ReportView.form_RelatorioClientes.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.ReportView.form_RelatorioClientes.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms.ReportView.form_RelatorioClientes.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Relatórios.form_RelatorioEstoqueProdutos.CarregarRelatorioEstoqueProduto">
+            <summary>
+            Carrega o relatório de estoque de produtos no ReportViewer, buscando todos os produtos do repositório e adicionando-os como fonte de dados.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Relatórios.form_RelatorioEstoqueProdutos.form_RelatorioEstoqueProdutos_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento disparado ao carregar o formulário de relatório de estoque de produtos, iniciando o carregamento dos dados no ReportViewer.
+            </summary>
+        </member>
+        <member name="F:TesteMD.Forms.Relatórios.form_RelatorioEstoqueProdutos.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Relatórios.form_RelatorioEstoqueProdutos.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms.Relatórios.form_RelatorioEstoqueProdutos.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Relatórios.form_RelatorioVendas.CarregarRelatorioVendas">
+            <summary>
+            Carrega o relatório de vendas no ReportViewer, buscando todas as vendas do repositório e adicionando-as como fonte de dados.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Relatórios.form_RelatorioVendas.form_RelatorioVendas_Load(System.Object,System.EventArgs)">
+            <summary>
+            Evento disparado ao carregar o formulário de relatório de vendas, iniciando o carregamento dos dados no ReportViewer.
+            </summary>
+        </member>
+        <member name="F:TesteMD.Forms.Relatórios.form_RelatorioVendas.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Relatórios.form_RelatorioVendas.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms.Relatórios.form_RelatorioVendas.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_BuscarProdutoManual.ZerarSelecaoCombobox">
+            <summary>
+            Zera a selação do combobox de produtos para que o evento SelectedIndexChanged não seja chamado
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_BuscarProdutoManual.CarregarComboboxProdutos">
+            <summary>
+            Carrega os produtos do repository no ComboBox, definindo o nome como DisplayMember e o ID como ValueMember.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_BuscarProdutoManual.CarregarInformacoesProdutoSelecionado">
+            <summary>
+            Exibe as informações do produto selecionado no ComboBox nos campos apropriados.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_BuscarProdutoManual.cmbProdutos_SelectedIndexChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento disparado ao alterar o produto selecionado no ComboBox, carregando as informações do produto.
+            </summary>
+        </member>
+        <member name="F:TesteMD.Forms.Vendas.form_BuscarProdutoManual.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_BuscarProdutoManual.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_BuscarProdutoManual.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.ConfigurarDataGridViewVendas">
+            <summary>
+            Configura as colunas do grid de vendas, definindo a visibilidade e a ordem de exibição das colunas.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.PopularGridvendas">
+            <summary>
+            Inicializa a lista de vendas e define o BindingSource como fonte de dados do grid de vendas.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.CarregarClientesCombobox">
+            <summary>
+            Carrega os clientes no ComboBox de clientes, exibindo uma mensagem de erro em caso de falha.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.form_VendaPrincipal_Load(System.Object,System.EventArgs)">
+            <summary>
+            Carrega os clientes no ComboBox ao iniciar o formulário e limpa a seleção.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.IsClienteEProdutoSelecionado">
+            <summary>
+            Valida se um cliente e um produto estão selecionados e exibe mensagens de erro se não estiverem selecionados.
+            </summary>
+            <returns>Retorna true se ambos estiverem selecionados, caso contrário, retorna false.</returns>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.EfetuarVenda">
+            <summary>
+            Efetua a venda de todos os itens no grid, atualizando o estoque de cada produto.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.AtualizarEstoqueProduto(TesteMD.Domain.Models.Venda)">
+            <summary>
+            Atualiza o estoque de um produto após a venda, decrementando a quantidade de unidades.
+            </summary>
+            <param name="_venda">A venda que será processada, contendo informações do produto vendido.</param>  
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.btnEfetuarVenda_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento acionado ao pressionar o botão de efetuar venda. Chama o método EfetuarVenda.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.IsProdutoValido(TesteMD.Domain.Models.Produto)">
+            <summary>
+            Valida se o produto digitado é válido, exibindo uma mensagem de erro se não for encontrado.
+            </summary>
+            <param name="produtoDigitado">Produto a ser validado.</param>
+            <returns>Retorna true se o produto for válido, caso contrário, retorna false.</returns>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.IsProdutoPossuiUnidadesEstoque(TesteMD.Domain.Models.Produto)">
+            <summary>
+            Verifica se o produto possui unidades em estoque. Exibe mensagem de erro se não houver estoque.
+            </summary>
+            <param name="produtoDigitado">Produto a ser verificado.</param>
+            <returns>Retorna true se o produto possui unidades suficientes em estoque, caso contrário, retorna false.</returns>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.IsProdutoGridUltrapassouLimiteEstoque(TesteMD.Domain.Models.Produto)">
+            <summary>
+            Verifica se o produto já foi inserido na lista de vendas e se a quantidade não ultrapassa o estoque.
+            </summary>
+            <param name="_produtoQueFoiDigitado">Produto a ser verificado.</param>
+            <returns>Retorna true se o produto foi inserido e a quantidade não ultrapassa o estoque, caso contrário, retorna false.</returns>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.IsProdutoJaFoiInserido(TesteMD.Domain.Models.Produto)">
+            <summary>
+            Verifica se o produto já foi inserido na lista de vendas. Se sim, apenas incrementa a quantidade.
+            </summary>
+            <param name="_produtoQueFoiDigitado">Produto a ser verificado.</param>
+            <returns>Retorna true se o produto foi inserido, caso contrário, retorna false.</returns>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.AcrescentarQuantidadeProduto(TesteMD.Domain.Models.Produto)">
+            <summary>
+            Acrescenta uma unidade ao produto existente na lista de vendas.
+            </summary>
+            <param name="_produtoQueFoiDigitado">Produto para o qual a quantidade será acrescida.</param>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.btnInserirItemGridVendas_Click(System.Object,System.EventArgs)">
+            <summary>
+            Evento acionado ao pressionar o botão para inserir item na lista de vendas. Chama o método InserirItensNaLista.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.SetarFocoTextBoxCodigoBarrasProduto">
+            <summary>
+            Define o foco no campo de código de barras, limpando e selecionando o texto.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.CalcularTotalItens">
+            <summary>
+            Calcula o total de itens na lista de vendas e exibe o valor total no label.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.AtualizarGrid">
+            <summary>
+            Atualiza o grid de vendas, vinculando o BindingSource e refrescando o grid.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.txtCodigoBarras_TextChanged(System.Object,System.EventArgs)">
+            <summary>
+            Evento acionado ao modificar o campo de código de barras, chamando o método para inserir itens na lista.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.InserirItensNaLista">
+            <summary>
+            Insere um item na lista de vendas após validar o produto e as condições de estoque.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.btnBuscarProduto_Click(System.Object,System.EventArgs)">
+            <summary>
+            Abre o formulário de busca de produto manualmente para permitir ao usuário selecionar um produto.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.form_VendaPrincipal_KeyDown(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Evento acionado ao pressionar teclas específicas (F11 ou F12) para buscar produtos ou finalizar a venda.
+            </summary>
+        </member>
+        <member name="F:TesteMD.Forms.Vendas.form_VendaPrincipal.components">
+            <summary>
+            Required designer variable.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.Dispose(System.Boolean)">
+            <summary>
+            Clean up any resources being used.
+            </summary>
+            <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        </member>
+        <member name="M:TesteMD.Forms.Vendas.form_VendaPrincipal.InitializeComponent">
+            <summary>
+            Required method for Designer support - do not modify
+            the contents of this method with the code editor.
+            </summary>
+        </member>
+        <member name="M:TesteMD.Program.Main">
+            <summary>
+            Ponto de entrada principal para o aplicativo.
+            </summary>
+        </member>
+        <member name="T:TesteMD.Properties.Resources">
+            <summary>
+              Uma classe de recurso de tipo de alta segurança, para pesquisar cadeias de caracteres localizadas etc.
+            </summary>
+        </member>
+        <member name="P:TesteMD.Properties.Resources.ResourceManager">
+            <summary>
+              Retorna a instância de ResourceManager armazenada em cache usada por essa classe.
+            </summary>
+        </member>
+        <member name="P:TesteMD.Properties.Resources.Culture">
+            <summary>
+              Substitui a propriedade CurrentUICulture do thread atual para todas as
+              pesquisas de recursos que usam essa classe de recurso de tipo de alta segurança.
+            </summary>
+        </member>
+        <member name="P:TesteMD.Properties.Resources.search_50px">
+            <summary>
+              Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+            </summary>
+        </member>
+        <member name="T:SqlServerTypes.Utilities">
+            <summary>
+            Utility methods related to CLR Types for SQL Server 
+            </summary>
+        </member>
+        <member name="M:SqlServerTypes.Utilities.LoadNativeAssemblies(System.String)">
+            <summary>
+            Loads the required native assemblies for the current architecture (x86 or x64)
+            </summary>
+            <param name="rootApplicationPath">
+            Root path of the current application. Use Server.MapPath(".") for ASP.NET applications
+            and AppDomain.CurrentDomain.BaseDirectory for desktop applications.
+            </param>
+        </member>
+    </members>
+</doc>
